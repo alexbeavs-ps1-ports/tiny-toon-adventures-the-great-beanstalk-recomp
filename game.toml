@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Tiny Toon Adventures - The Great Beanstalk"
+id = "SLUS-00638"
+players = 1
+exe = "disc/SLUS_006.38"
+disc = "disc/Tiny Toon Adventures - The Great Beanstalk (USA).cue"
+discs = ["disc/Tiny Toon Adventures - The Great Beanstalk (USA).cue"]
+disc_serials = ["SLUS-00638"]
+load_address = "0x80010000"
+entry_pc = "0x80032EE8"
+text_size = "0x0003A000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Tiny Toon Adventures - The Great Beanstalk (USA).bin"
+cue_name = "Tiny Toon Adventures - The Great Beanstalk (USA).cue"
+boot_exe = "SLUS_006.38"
+known_sizes = [158336640]
+known_md5 = [
+  "2653469d6948f3cf358e3e1cf81cb58c",
+]
+known_sha1 = [
+  "7ebbe748be345bfbe04525e062aec6a04abf78da",
+]
+known_crc32 = [
+  "a3a64d16",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Tiny Toon Adventures - The Great Beanstalk Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "f30eef40506eeb5f65633158df59636d10966a56d0a1f53adead47e2d0f4f1b8"

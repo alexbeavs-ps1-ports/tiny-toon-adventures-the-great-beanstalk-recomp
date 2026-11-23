@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "tiny-toon-adventures-the-great-beanstalk-psx",
+  "name": "Tiny Toon Adventures - The Great Beanstalk",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "tiny-toon-adventures-the-great-beanstalk-recomp",
+  "rom_identity": {
+    "crc32": [
+      "a3a64d16"
+    ],
+    "md5": [
+      "2653469d6948f3cf358e3e1cf81cb58c"
+    ],
+    "sha1": [
+      "7ebbe748be345bfbe04525e062aec6a04abf78da"
+    ],
+    "disc_serials": [
+      "SLUS-00638"
+    ],
+    "sizes": [
+      158336640
+    ],
+    "filenames": [
+      "Tiny Toon Adventures - The Great Beanstalk (USA).cue",
+      "Tiny Toon Adventures - The Great Beanstalk (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "f30eef40506eeb5f65633158df59636d10966a56d0a1f53adead47e2d0f4f1b8"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/tiny-toon-adventures-the-great-beanstalk-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "tiny-toon-adventures-the-great-beanstalk-*-windows-x64.zip",
+      "linux-x64": "tiny-toon-adventures-the-great-beanstalk-*-linux-x64.zip",
+      "macos-arm64": "tiny-toon-adventures-the-great-beanstalk-*-macos-arm64.zip",
+      "macos-x64": "tiny-toon-adventures-the-great-beanstalk-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "tiny_toon_adventures_the_great_beanstalk.exe",
+    "linux": "tiny_toon_adventures_the_great_beanstalk",
+    "macos": "tiny_toon_adventures_the_great_beanstalk"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/tiny-toon-adventures-the-great-beanstalk-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

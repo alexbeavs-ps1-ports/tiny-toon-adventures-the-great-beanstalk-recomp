@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Tiny Toon Adventures - The Great Beanstalk",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "tiny-toon-adventures-the-great-beanstalk-recomp",
+  "original": {
+    "region": "USA",
+    "serial": "SLUS-00638"
+  }
+}
